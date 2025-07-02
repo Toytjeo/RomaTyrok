@@ -4,7 +4,7 @@ localStorage.setItem('pigClickerLoggedIn', 'true');
 let isGuest = false;
 // GitHub Configuration - Edit these values
 let githubConfig = {
-    username: 'toytjeo',
+    username: 'Toytjeo',
     repo: 'RomaTyrok',
     token: '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'
 };
