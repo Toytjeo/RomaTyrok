@@ -1,7 +1,6 @@
 let clickCount = 0;
 let isLoggedIn = false;
-const STORAGE_KEY = 'pigClickerLoggedIn';
-sessionStorage.setItem(STORAGE_KEY, 'true');
+localStorage.setItem('pigClickerLoggedIn', 'true');
 let isGuest = false;
 // GitHub Configuration - Edit these values
 let githubConfig = {
@@ -208,7 +207,7 @@ document.getElementById('loginPassword').addEventListener('keypress', function(e
 window.onload = function() {
     // Disable the button initially
     document.getElementById('button3').disabled = true;
-    if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+    if (localStorage.getItem('pigClickerLoggedIn') === 'true') {
         isLoggedIn = true;
         showGameSection();
         document.getElementById('button3').disabled = false;
