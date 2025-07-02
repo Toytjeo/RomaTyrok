@@ -222,3 +222,53 @@ window.onload = function() {
 document.addEventListener('click', function initAudio() {
     document.removeEventListener('click', initAudio);
 });
+// Add this function after your existing functions
+function resetClickCount() {
+    if (!isLoggedIn || isGuest) {
+        alert('Тільки авторизовані користувачі можуть скидати лічильник!');
+        return;
+    }
+    
+    if (confirm('Ви впевнені, що хочете скинути лічильник до 0?')) {
+        clickCount = 0;
+        updateDisplay();
+        
+        // Save the reset to GitHub
+        saveClickCount();
+        
+        alert('Лічильник скинуто!');
+    }
+}
+
+// Add this to your HTML where you want the reset button to appear
+// You can add it in your showGameSection function or directly in HTML
+function addResetButton() {
+    const resetButtonHTML = `
+        <button id="resetButton" onclick="resetClickCount()" 
+                style="padding: 8px 16px; margin: 10px; border: none; border-radius: 5px; 
+                       font-size: 14px; cursor: pointer; background-color: #dc3545; color: white;">
+            Скинути лічильник
+        </button>
+    `;
+    
+    // Add the button after the main clicker button
+    document.getElementById('button3').insertAdjacentHTML('afterend', resetButtonHTML);
+}
+
+// Modify your showGameSection function to include the reset button
+function showGameSection() {
+    document.getElementById('loginSection').classList.add('hidden');
+    document.getElementById('gameSection').classList.remove('hidden');
+    document.getElementById('statsSection').classList.remove('hidden');
+    
+    // Add reset button if it doesn't exist and user is logged in
+    if (!document.getElementById('resetButton') && isLoggedIn && !isGuest) {
+        addResetButton();
+    }
+    
+    // Hide reset button for guests
+    const resetBtn = document.getElementById('resetButton');
+    if (resetBtn) {
+        resetBtn.style.display = (isLoggedIn && !isGuest) ? 'inline-block' : 'none';
+    }
+}
