@@ -207,13 +207,15 @@ document.getElementById('loginPassword').addEventListener('keypress', function(e
 window.onload = function() {
     // Disable the button initially
     document.getElementById('button3').disabled = true;
-    if (localStorage.getItem('pigClickerLoggedIn') === 'true') {
-        isLoggedIn = true;
-        showGameSection();
-        document.getElementById('button3').disabled = false;
-        document.getElementById('statusMessage').classList.add('hidden');
-        loadClickCount();
-    }
+    setTimeout(() => {
+        if (localStorage.getItem('pigClickerLoggedIn') === 'true') {
+            isLoggedIn = true;
+            showGameSection();
+            document.getElementById('button3').disabled = false;
+            document.getElementById('statusMessage').classList.add('hidden');
+            loadClickCount();
+        }
+    }, 100);
 };
 
 // Initialize audio context on first user interaction
