@@ -1,5 +1,6 @@
 let clickCount = 0;
 let isLoggedIn = false;
+const STORAGE_KEY = 'pigClickerLoggedIn';
 sessionStorage.setItem(STORAGE_KEY, 'true');
 let isGuest = false;
 // GitHub Configuration - Edit these values
@@ -8,7 +9,6 @@ let githubConfig = {
     repo: 'RomaTyrok',
     token: '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'
 };
-const STORAGE_KEY = 'pigClickerLoggedIn';
 // Pig sounds (using Web Audio API to generate pig-like sounds)
         // Pig sounds (using real pig sound files)
         const pigAudioFiles = [
