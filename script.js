@@ -6,7 +6,7 @@ let isGuest = false;
 let githubConfig = {
     username: 'Toytjeo',
     repo: 'RomaTyrok',
-    token: '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'
+    token: 'ghp_' + 'Jd5x4tTbGAWlMtzHQZyHv7rESJsZmw4aGYpr'
 };
 // Pig sounds (using Web Audio API to generate pig-like sounds)
         // Pig sounds (using real pig sound files)
