@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.login-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-section h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.login-input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    margin: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    min-width: 200px;
+}
+
+.login-button {
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.github-setup {
+    display: none;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+}
+
+.section__h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.section__number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #feca57;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin: 10px 0;
+}
+
+.section__times {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.section__button {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: #ff6b6b;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.section__button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.section__button:active {
+    transform: scale(0.95);
+}
+
+.roma {
+    background-image: url(https://w1.pngwing.com/pngs/335/700/png-transparent-emoji-like-pig-piglet-smiley-cartoon-facebook-pink-red.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section__button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    filter: grayscale(50%);
+}
+
+.login-prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.login-prompt.hidden {
+    display: none;
+}
+
+.stats {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.error {
+    color: #ff6b6b;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.success {
+    color: #2ecc71;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .section__button {
+        height: 150px;
+        width: 150px;
+    }
+    
+    .section__h1 {
+        font-size: 24px;
+    }
+    
+    .section__number {
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roma's Pig Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Section -->
+        <div class="login-section" id="loginSection">
+            <h2>🐷 Вход в систему 🐷</h2>
+            <input type="password" class="login-input" id="loginPassword" placeholder="Введите пароль...">
+            <br>
+            <button class="login-button" onclick="login()">Войти</button>
+            <br>
+            <button class="guest-button" onclick="loginAsGuest()">👤 Войти как гость</button>
+            <div id="loginError" class="error"></div>
+        </div>
+        
+        <!-- Game Section -->
+        <section class="section hidden" id="gameSection">
+            <h1 class="section__h1">🐷 Клацалка для ромы турка 🐷</h1>
+            <div class="status-message hidden" id="statusMessage">👤 Режим гостя - только просмотр</div>
+            <p class="section__number" id="number3">0</p>
+            <p class="section__times">раз(а)</p>
+            <button class="section__button roma" id="button3" onclick="addOne()"></button>
+        </section>
+        
+        <!-- Stats Section -->
+        <div class="stats hidden" id="statsSection">
+            <h3>📊 Статистика</h3>
+            <p>Последнее обновление: <span id="lastUpdate">Никогда</span></p>
+            <p>Статус GitHub: <span id="githubStatus">Не настроен</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
